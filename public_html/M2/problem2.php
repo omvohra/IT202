@@ -4,19 +4,17 @@ $a2 =[1.99,1.99, 0.99, 1.973, 0.99,1.91, 0.91, 0.99];
 $a3 =[0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 01.01];
 $a4 =[10.01, -12.22, 0.23, 29.20, -5.13, 2.12];
 function getTotal($arr) {
-    //use the $arr variable to iterate over
+    //ov33, 05/01/2023
     echo "<br>Processing Array: <br> <pre>". var_export($arr, True) . "</pre>";
     $total = 0.00;
     //TODO do adding here
     foreach($arr as $i)
         $total += $i;
-    //TODO Extra Credit: show 2 point precision even if last number is a 0
+    //TODO do rounding stuff here
     echo "<br>The total is ".var_export((round($total,2)), true);
  }
-
-
+echo "Problem 2: Adding Floats<br>";
 ?>
-<h2> Problem 2: Sum the values and display the total</h2>
 <table>
 <thead>
     <th>A1</th>
@@ -43,11 +41,12 @@ function getTotal($arr) {
 </table>
 <style>
     table {
-        border-spacing: 5px 10px;
-        border-collapse : separate;
+        border-spacing: 2em 3em;
+        border-collapse: separate;
     }
+
     td {
-        border-right: solid 3px red;
-        border-left: solid 3px red;
+        border-right: solid 1px black;
+        border-left: solid 1px black;
     }
 </style>

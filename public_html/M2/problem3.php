@@ -1,51 +1,52 @@
 <?php
-$A1 =[-1, -2, -3, -4, -5, -6, -7, -8, -9, -10];
-$B2 =[-1, 1, -2, 2, 3, -3, -4, 115];
-$C3 =[-0.03, 0.0002, -.11];
-$D4 =['-1',"hello","2","-3","-4","5","-6","6",'-7','71',"71","a"];
+$a1 =[-1, -2, -3, -4, -5, -6, -7, -8, -9, -10];
+$a2 =[-1, 1, -2, 2, 3, -3, -4, 5];
+$a3 =[-0.01, -0.0001, -.15];
+$a4 =["-1","2","-3","4","-5","5","-6","6","-7","7"];
 function bePositive($arr) {
-    //use the $arr variable to iterate over
-    echo "<br>Processing Array: <br> <pre>". var_export($arr, True) . "</pre>";
+    // ov33, 05/01/2023
+    echo "<br>Processing Array: <br> <pre>". var_export($arr, true) . "</pre>";
     echo "<br>Positive Output: ";
-    //TODO echo to output any value that positive (i.e., ignore negatives and characters)
+    //TODO use echo to output all of the values as positive (even if they were originally positive) 
+    //hint: may want to use var_dump() to show final data types
     foreach($arr as $i)
         if($i > 0 && is_numeric($i)){
             echo $i."\n";
         }
 }
+echo "Problem 3: Be Positive<br>";
 ?>
-<h2> Problem 3: Be Positive</h2>
 <table>
-<thead>
-    <th>A1</th>
-    <th>B2</th>
-    <th>C3</th>
-    <th>D4</th>
-</thead>
-<tbody>
-    <tr>
-        <td>
-            <?php bePositive($A1); ?>
-        </td>
-        <td>
-            <?php bePositive($B2); ?>
-        </td>
-        <td>
-            <?php bePositive($C3); ?>
-        </td>
-        <td>
-            <?php bePositive($D4); ?>
-        </td>
-    </tr>
-</tbody>
+    <thread>
+        <th>A1</th>
+        <th>A2</th>
+        <th>A3</th>
+        <th>A4</th>
+    </thread>
+    <tbody>
+        <tr>
+            <td>
+                <?php bePositive($a1); ?>
+            </td>
+            <td>
+                <?php bePositive($a2); ?>
+            </td>
+            <td>
+                <?php bePositive($a3); ?>
+            </td>
+            <td>
+                <?php bePositive($a4); ?>
+            </td>
+        </tr>
 </table>
 <style>
     table {
-        border-spacing: 5px 10px;
-        border-collapse : separate;
+        border-spacing: 2em 3em;
+        border-collapse: separate;
     }
+
     td {
-        border-right: solid 3px blue;
-        border-left: dashed 3px red;
+        border-right: solid 1px black;
+        border-left: solid 1px black;
     }
 </style>
